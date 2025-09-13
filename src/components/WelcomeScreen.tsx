@@ -167,7 +167,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onNext }) => {
             Hello
           </h1>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-light text-pink-600 tracking-[0.3em] opacity-90 drop-shadow-sm">
-            KuchuPuchu
+            Cutiepiee
           </h2>
         </div>
       </div>
