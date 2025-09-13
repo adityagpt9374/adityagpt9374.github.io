@@ -1,0 +1,182 @@
+## First follow these instructions carefully and only contact me if its not working. 
+
+# My Video tutorials : 
+---> For getting the sharable link : https://youtu.be/bFCnDsQwNvA
+
+# Basic Instructions
+
+1. install vs code if you dont have in your system.
+refer to these for installation :
+https://youtu.be/3eCmc0t6aqA?si=TkV0bVEz_95FbMmi
+
+2. install nodejs if you dont have in your system. 
+for installation follow this : 
+https://youtu.be/uCgAuOYpJd0?si=2ICwr3Ih1P_ru9KA
+
+3. These two are required to run the code otherwise it'll not work
+
+4. Now open the "anniversary" folder which you got, in vs code.
+
+## I mention it again, open the folder named "anniversary" only! not any other!
+
+6. Now open the terminal in vs code 
+
+7. type "npm i" or "npm install" in the terminal and press enter
+
+## if you get any error saying script is not installed then :
+
+## use this command in the terminal: 
+
+Set-ExecutionPolicy -Scope CurrentUser Unrestricted
+
+
+8. type "npm run dev" in the terminal and press enter
+
+9. now you will get a local host link, you can CTRL + press and click on the link to view the website in your local system.
+
+10. if you want to share with someone then you will have to host it.
+
+11. for hosting you will need github and vercel. 
+
+12. Refer to my video for hosting it :
+https://youtu.be/bFCnDsQwNvA
+
+---
+
+# How to Customize Images and Text
+
+## 📝 Changing Text Content
+
+### 1. Welcome Screen Text
+**File:** `src/components/WelcomeScreen.tsx`
+- **Line 75-76:** Change "Hello" and "KuchuPuchu" to your desired names
+```tsx
+<h1 className="text-8xl...">Hello</h1>
+<h2 className="text-4xl...">YourName</h2>
+```
+
+### 2. Photo Scene Text
+**File:** `src/components/PhotoScene.tsx`
+- **Line 310-311:** Change the anniversary message
+```tsx
+<MainTitle>Here's Another Year Together</MainTitle>
+<SubTitle>I LOVE YOUUU</SubTitle>
+```
+
+### 3. Particle Scene Text
+**File:** `src/components/ParticleScene.tsx`
+- **Line 126-133:** Customize the romantic message
+```tsx
+<h1>Every Moment</h1>
+<h2>With You</h2>
+<h3>Is Pure Magic ✨</h3>
+```
+
+### 4. Cake Scene Text
+**File:** `src/components/CakeScene.tsx`
+- **Line 377-378:** Change cake message
+```tsx
+<p>🎂 I Cooked An Anniversary Cake For You! 🎂</p>
+<p>Make a wish and cut the cake bb...</p>
+```
+
+### 5. Page Title
+**File:** `index.html`
+- **Line 6:** Change the browser tab title
+```html
+<title>Happy Anniversary YourName ❤️</title>
+```
+
+## 🖼️ Changing Images
+
+### 1. Welcome Screen GIF
+**File:** `src/components/WelcomeScreen.tsx`
+- **Step 1:** Add your GIF to `src/imgs/` folder
+- **Step 2:** Update import on line 3:
+```tsx
+import YourGif from '../imgs/your-gif-name.gif'
+```
+- **Step 3:** Update line 56:
+```tsx
+src={YourGif}
+```
+
+### 2. Couple Photo
+**File:** `src/components/PhotoScene.tsx`
+- **Step 1:** Add your couple photo to `src/imgs/` folder (recommended: 400x400px or square ratio)
+- **Step 2:** Update import on line 4:
+```tsx
+import CouplePhoto from '../imgs/your-photo.jpg';
+```
+
+### 3. Balloon Images (Cake Scene)
+**File:** `src/components/CakeScene.tsx`
+- **Step 1:** Add balloon images to `src/imgs/` folder
+- **Step 2:** Update imports on lines 7-9:
+```tsx
+import Balloon1 from '../imgs/your-balloon1.png'
+import Balloon2 from '../imgs/your-balloon2.png'
+import Balloon3 from '../imgs/your-balloon3.png'
+```
+
+## 🎨 Changing Colors
+
+### 1. Main Theme Colors
+**File:** `src/components/WelcomeScreen.tsx` (and other components)
+- Find color classes like `text-pink-600`, `bg-purple-50`
+- Replace with your preferred Tailwind colors:
+  - `text-blue-600` for blue text
+  - `text-green-600` for green text
+  - `bg-yellow-50` for light yellow background
+
+### 2. Cake Colors
+**File:** `src/components/CakeScene.tsx`
+- **Lines 21-24:** Change cake color constants
+```tsx
+const vanilla = '#your-color';
+const chocolate = '#your-color';
+const candleColor = '#your-color';
+```
+
+## 📁 Image File Requirements
+
+- **Supported formats:** .jpg, .jpeg, .png, .gif
+- **Welcome GIF:** Any size (will be auto-resized)
+- **Couple Photo:** Square ratio recommended (400x400px ideal)
+- **Balloons:** PNG with transparent background works best
+- **File naming:** Use simple names without spaces (use-dashes-or_underscores)
+
+## 🔧 Advanced Customizations
+
+### Adding New Scenes
+1. Create new component in `src/components/`
+2. Add to scenes array in `src/App.tsx`
+3. Follow existing component patterns
+
+### Changing Animation Timing
+- Look for `setTimeout` and `gsap.timeline` in component files
+- Adjust duration values (in milliseconds for setTimeout, seconds for GSAP)
+
+### Custom Styling
+- Most components use Tailwind CSS classes
+- Some use styled-components (CakeScene, PhotoScene)
+- Modify className attributes or styled component definitions
+
+## ⚠️ Important Notes
+
+1. **Always backup your original files** before making changes
+2. **Test changes locally** using `npm run dev` before hosting
+3. **Image file paths are case-sensitive** on hosting platforms
+4. **Keep image files under 5MB** for better loading performance
+5. **After making changes, restart the dev server** (Ctrl+C then `npm run dev`)
+
+## 🐛 Common Issues
+
+- **Images not showing:** Check file path and extension spelling
+- **Text not updating:** Clear browser cache (Ctrl+F5)
+- **Site not loading:** Check terminal for error messages
+- **Build errors:** Make sure all imported files exist
+
+---
+
+**Need help?** Contact me with screenshots of any errors you encounter!
